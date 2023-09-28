@@ -478,3 +478,28 @@ function resolve_room_photos(){
     document.getElementById('UserPublishedPhotos').innerHTML = html;
     })
 }
+
+
+function resolve_room_articles(){
+    let room_id = localStorage.getItem('GoToRoom');
+    articles_query(room_id).then(result => {
+        let html = '';
+        for (let i in result){
+            let data = result[i];
+            html += `
+            <div class="col">
+            <section class="card" style="width: 27rem">
+            <div class="card-body" id="${data['id']}">
+              <h5 class="card-title">${data['title']}</h5>
+              <p class="card-text">${data['content']}</p>
+              <div class="col-md-12 text-center">
+               <p>Published: ${data['postDatetime']}</p>
+              </div>
+            </div>
+          </section>
+          </div>
+            `;
+        }
+    document.getElementById('UserPublishedArticles').innerHTML = html;
+    })
+}
