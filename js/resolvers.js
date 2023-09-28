@@ -33,6 +33,54 @@ function resolve_signup(){
 }
 
 
+function resolve_change_avatar(){
+    // var credentials = JSON.parse(localStorage.getItem('USER_TOKEN'));    
+    // if (!credentials){
+    //     alert('Log to reply!');
+    //     return;
+    // }
+    let modal = document.getElementById('ChangeAvatarModal');
+    let content = document.getElementById('SelectAvatar').files[0];
+    if (!content){
+        alert('Image is required!');
+        modal.click('Cancel');
+        return;
+    }
+    let payload = "mutation{updateUser(input:{}){user{fullName avatar}}}";
+    const form = new FormData();
+    form.append('query', payload)
+    form.append("avatar", content);
+
+    update_user_mutation(form);
+}
+
+
+function build_change_avatar_modal(){
+    var modal_html = document.getElementById('CHANGE_AVATAR');
+    modal_html.innerHTML = `
+    <div class="modal fade" id="ChangeAvatarModal" tabindex="-1" role="dialog" aria-labelledby="ChangeAvatarModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="ChangeAvatarModalLabel">Change Avatar</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <label class="form-label" for="SelectAvatar">Select Image</label>
+                <input type="file" class="form-control" id="SelectAvatar" />
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-dark" onclick="resolve_change_avatar()">Confirm</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    `
+}
+
 
 function resolve_homepage(){
     user_query().then(response => {
@@ -41,6 +89,14 @@ function resolve_homepage(){
         let username = response['username'];
         let fullname = response['fullName'];
         let threads = response['room']['threads'].slice(0,6);
+        let avatar = response['avatar'];
+
+        if (!avatar){
+            avatar = 'https://www.baxterip.com.au/wp-content/uploads/2019/02/anonymous.jpg';
+        }
+        else {
+            avatar = `data:image/png;base64,${avatar}`;
+        }
 
         localStorage.setItem('room', response['room']['id']);
 
@@ -60,11 +116,13 @@ function resolve_homepage(){
         document.getElementById('RoomDescription').innerHTML = `
         <p class="text-light" style="text-align: justify; text-justify: inter-word; margin-bottom: 0">${room_description}</p>
         `;
-
+        build_change_avatar_modal()
         // Set left sidebar items
         document.getElementById('UserThumb').innerHTML = `
-        <img src="https://github.com/mdo.png" alt="${fullname}" width="30" height="30" class="rounded-circle">
-        <span class="d-none d-sm-inline mx-1">${username}</span>
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ChangeAvatarModal" alt="Change Avatar">
+        <img src="${avatar}" alt="${fullname}" width="30" height="30" class="rounded-circle" alt="Change Avatar">
+        <span class="d-none d-sm-inline mx-1" alt="Change Avatar">${username}</span>
+        </button>
         `;
 
         // set threads
@@ -426,7 +484,7 @@ function resolve_room(){
 
         // Set left sidebar items
         document.getElementById('UserThumb').innerHTML = `
-        <img src="https://github.com/mdo.png" alt="${fullname}" width="30" height="30" class="rounded-circle">
+        <img src="${avatar}" alt="${fullname}" width="30" height="30" class="rounded-circle">
         <span class="d-none d-sm-inline mx-1">${username}</span>
         `;
 

@@ -57,7 +57,7 @@ function signup_mutation(email, username, fullname, password, birthdate) {
 function user_query(){
     let email = localStorage.getItem('email');
     let token = localStorage.getItem('session_token');
-    let payload = `{"query":"query{user(email: \\\"${email}\\\"){username fullName dateJoined room{id name description defaultBackgroundActive photosSectionActive articlesSectionActive threadsSectionActive roomPicture backgroundPicture  threads{ id name numComments lastCommentDatetime } } }}"}`
+    let payload = `{"query":"query{user(email: \\\"${email}\\\"){username fullName dateJoined avatar room{id name description defaultBackgroundActive photosSectionActive articlesSectionActive threadsSectionActive roomPicture backgroundPicture  threads{ id name numComments lastCommentDatetime } } }}"}`
     let options = get_request_options(payload);
     options['headers']['Authorization'] = `JWT ${token}`;
     return fetch(url, options)
@@ -91,6 +91,21 @@ function create_photo_mutation(payload){
     const XHR = new XMLHttpRequest();
     XHR.addEventListener("load", (event) => {
         window.location.href = 'user_photos.html';
+    });
+    XHR.addEventListener("error", (event) => {
+        alert("Oops! Something went wrong.");
+    });
+    XHR.open("POST", url);
+    XHR.setRequestHeader('Authorization', `JWT ${token}`);
+    XHR.send(payload);
+}
+
+function update_user_mutation(payload){
+    let token = localStorage.getItem('session_token');
+
+    const XHR = new XMLHttpRequest();
+    XHR.addEventListener("load", (event) => {
+        window.location.href = 'home.html';
     });
     XHR.addEventListener("error", (event) => {
         alert("Oops! Something went wrong.");

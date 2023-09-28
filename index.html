@@ -13,12 +13,15 @@
 
     <title>My Room</title>
   </head>
-  <body>
+  <body style="background-color: rgba(16, 14, 14, 0.466)">
     <div align="center">
+        <h1>My Room</h1>
+        <div class="well"><p>Share your ideas</p></div>
         <h2>Sign In</h2>
+        <form>
         <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Email</span>
-            <input id="LoginEmail" type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+          <span class="input-group-text" id="basic-addon1">Email</span>
+          <input type="email" class="form-control" id="LoginEmail" aria-describedby="emailHelp" placeholder="ex@mple.mail">
         </div>
 
         <div class="input-group mb-3">
@@ -27,8 +30,9 @@
         </div>
         
         <div class="input-group mb-3">
-            <button id="LoginConfirm" class="btn btn-outline-secondary" type="button" onclick="login()">Login</button>
+            <button id="LoginConfirm" class="btn btn-success" type="button" onclick="login()">Login</button>
         </div>
+      </form>
     </div>
 
     <a href="pages/signup.html">Dont have an account? Sign Up</a>

@@ -104,11 +104,28 @@
             login_pannel.innerHTML = `<p>${session['username']}</p>`;
           }
       </script> -->
+      <div id="id01" class="modal">
+        <form class="modal-content animate">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+        </form>
+      </div>
+      
+    <script>
+    var modal = document.getElementById('id01');
+        window.onclick = function(event) {
+          if (event.target == modal) {
+               modal.style.display = "none";
+          }
+        }
+      
+  </script>
     </nav>
     <!-- title -->
     <hr />
-    <img src="static/img/room_default.png" class="rounded mx-auto d-block" id="HomeRoomPicture">
-
+    <img src="https://www.baxterip.com.au/wp-content/uploads/2019/02/anonymous.jpg" class="rounded mx-auto d-block" id="HomeRoomPicture">
+    <div id="CHANGE_AVATAR"></div>
     <hr />
     <section class="bg-dark py-2">
         <br />
