@@ -453,3 +453,28 @@ function resolve_room(){
         document.getElementById('SideUsername').setHTML(fullname);
     })
 }
+
+
+function resolve_room_photos(){
+    let room_id = localStorage.getItem('GoToRoom');
+    photos_query(room_id).then(result => {
+        let html = '';
+        for (let i in result){
+            let data = result[i];
+            html += `
+            <div class="col">
+            <section class="card" style="width: 27rem">
+            <img src="data:image/png;base64,${data['data']}" class="card-img-top"/>
+            <div class="card-body" id="${data['id']}">
+              <p class="card-text">${data['description']}</p>
+              <div class="col-md-12 text-center">
+               <small>Published: ${data['postDatetime']}</small>
+              </div>
+            </div>
+          </section>
+          </div>
+            `;
+        }
+    document.getElementById('UserPublishedPhotos').innerHTML = html;
+    })
+}
