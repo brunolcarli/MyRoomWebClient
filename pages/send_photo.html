@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <!-- 
+  ###################################
+    @Author: Bruno Luvizotto Carli
+    @beelzebruno
+  ###################################
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Owner code -->
+    <!-- <script src="js/html_builder.js"></script> -->
+    <script src="../js/requests.js"></script>
+    <script src="../js/resolvers.js"></script>
+    <!-- <script src="js/auth.js"></script> -->
+
+
+    <title>Upload Photo - My Room</title>
+  </head>
+  <body style="background-color: rgba(16, 14, 14, 0.466)">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" href="index.html"
+            >Home<span class="sr-only">(current)</span></a
+          >
+          <a class="nav-link text-white" href="">Photos</a>
+          <a class="nav-link text-white" href="">Articles</a>
+          <a class="nav-link text-white" href="">Explore Rooms</a>
+        </div>
+      </div>
+      <div id="">Username/Exit</div>
+
+    </nav>
+    <!-- title -->
+    <hr />
+
+    <hr />
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Description (optional)</label>
+        <input type="text" class="form-control" id="UploadPhotoDescription">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="UploadPhoto">Select Image</label>
+      <input type="file" class="form-control" id="UploadPhoto" />
+      </div>
+
+      <hr />
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="UploadPhotoPublic">
+        <label class="form-check-label" for="UploadPhotoPublic">Public Photo</label>
+    </div>
+    <hr />
+    <div class="input-group mb-3">
+        <button id="EditConfirm" class="btn btn-outline-secondary" type="button" onclick="upload_photo()">Create</button>
+    </div>
+
+    <hr />
+
+    
+
+  </body>
+  <footer align="center">version: 0.0.0</footer>
+</html>

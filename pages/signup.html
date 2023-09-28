@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <!-- 
+  ###################################
+    @Author: Bruno Luvizotto Carli
+    @beelzebruno
+  ###################################
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Owner code -->
+    <!-- <script src="js/html_builder.js"></script> -->
+    <script src="../js/requests.js"></script>
+    <script src="../js/resolvers.js"></script>
+    <!-- <script src="js/auth.js"></script> -->
+
+    <!-- css -->
+    <!-- <style>
+      body {
+        background-image: url("https://i.ibb.co/Gpw4DDy/space-starfield-1669603450230.jpg");
+      }
+      canvas {
+        margin: 0 auto;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style> -->
+
+    <title>SignUp - My Room</title>
+  </head>
+  <body style="background-color: rgba(16, 14, 14, 0.466)">
+    
+    <hr />
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email</label>
+        <input type="text" class="form-control" id="SignupEmail">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label">Username</label>
+        <input type="text" class="form-control" id="SignupUsername">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="SignupFullname">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon2">Password</span>
+        <input id="SignupPassword" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+      </div>      
+
+
+      <hr />
+      <label for="SignupBirthdate">Birth Date</label>
+      <input id="SignupBirthdate" type="date" />
+      
+    <div class="input-group mb-3">
+        <button id="SignupConfirm" class="btn btn-outline-secondary" type="button" onclick="resolve_signup()">Confirm</button>
+    </div>
+
+    <hr />
+
+    <a href="../index.html">Login</a>
+
+  </body>
+  <footer align="center">version: 0.0.0</footer>
+</html>
