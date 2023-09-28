@@ -352,7 +352,7 @@ function get_comment_card(post_data){
         avatar = 'https://www.baxterip.com.au/wp-content/uploads/2019/02/anonymous.jpg';
     }
     else {
-        avatar = `url("data:image/png;base64,${post_data['author']['avatar']}")`;
+        avatar = `data:image/png;base64,${post_data['author']['avatar']}`;
     }
 
     var content = post_data['content'];
@@ -462,7 +462,7 @@ function resolve_room(){
             avatar = 'https://www.baxterip.com.au/wp-content/uploads/2019/02/anonymous.jpg';
         }
         else {
-            avatar = `url("data:image/png;base64,${avatar}")`;
+            avatar = `data:image/png;base64,${avatar}`;
         }
 
         if (response['backgroundPicture'] && response['defaultBackgroundActive'] == false){
