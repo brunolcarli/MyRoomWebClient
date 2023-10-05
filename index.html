@@ -1,41 +1,37 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
     <script src="js/requests.js"></script>
     <script src="js/resolvers.js"></script>
-
-    <title>My Room</title>
-  </head>
-  <body style="background-color: rgba(16, 14, 14, 0.466)">
-    <div align="center">
-        <h1>My Room</h1>
-        <div class="well"><p>Share your ideas</p></div>
-        <h2>Sign In</h2>
-        <form>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Email</span>
-          <input type="email" class="form-control" id="LoginEmail" aria-describedby="emailHelp" placeholder="ex@mple.mail">
-        </div>
-
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon2">Password</span>
-            <input id="LoginPassword" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
-        </div>
-        
-        <div class="input-group mb-3">
-            <button id="LoginConfirm" class="btn btn-success" type="button" onclick="login()">Login</button>
-        </div>
-      </form>
-    </div>
-
-    <a href="pages/signup.html">Dont have an account? Sign Up</a>
     
-  </body>
+</head>
+<body>
+    <div class="header">
+        <h1>My Room</h1>
+        <p>Share Your Ideas</p>
+    </div>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-field">
+                <label for="email"></label>
+                <input type="text" name="email" id="LoginEmail" placeholder="Enter Your Email">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="password"></label>
+                <input type="password" name="password" id="LoginPassword" placeholder="Enter Your Password">
+                <div class="underline"></div>
+            </div><br>
+            <button id="LoginConfirm" class="btn btn-success" type="button" onclick="login()">Login</button>
+            <div class="footer"><a href="pages/signup.html">Don't have an account? Sign Up</a></div>
+
+            
+        </form>
+    </div>
+</body>
 </html>

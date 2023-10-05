@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body {
+    background-color: #13131a;
+    overflow: hidden;
+    min-height: 100vh;
+    min-width: 100vh;
+    text-align: center;
+    margin: 0;
+}
+.header {
+    padding: 50px;
+    
+}
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
+}
+h1, p {
+    margin-top: 10px;
+    color:#f0f0f5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.979);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.input-field {
+    position: relative;
+    
+}    
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+    
+}
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: #13131a13;
+}
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: #13131a59;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+}
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+.input-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+}
+.input-field input {
+    outline: none;
+    font-size: 1rem;
+    color: #13131a;
+    background-color: #f0f0f5;
+    border: none;
+}
+form input[ type="submit"] {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: #13131a59;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color:#13131a ;
+}
+form input[ type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #13131a65, #5757585d, #13131a65);
+}
+.footer a {
+    color: #13131a;
+    margin-bottom: 5px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+@media screen and (max-width:600px) {
+    .container {
+       width: 100%;
+       max-width: 100%;
+       
+}
+}

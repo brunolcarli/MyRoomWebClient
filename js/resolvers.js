@@ -3,7 +3,7 @@
 function login(){
     let email = document.getElementById("LoginEmail").value;
     let password = document.getElementById("LoginPassword").value;
-
+    console.log(email)
     signin_mutation(email, password).then( result => {
         if (result){
             localStorage.setItem('session_token', result);
