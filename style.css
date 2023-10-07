@@ -11,9 +11,8 @@
 }
 body {
     background-color: #13131a;
-    overflow: hidden;
-    min-height: 100vh;
-    min-width: 100vh;
+    min-height: 100%;
+    min-width: 100%;
     text-align: center;
     margin: 0;
 }
@@ -22,9 +21,9 @@ body {
     
 }
 .container {
-    max-width: 400px;
+    max-width: 40%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 3%;
     background-color: #f0f0f5;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
