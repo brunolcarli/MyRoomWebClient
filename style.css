@@ -40,7 +40,7 @@ form {
 }
 .input-field {
     position: relative;
-    
+   
 }    
 form .input-field:first-child {
     margin-bottom: 1.5rem;
@@ -82,7 +82,7 @@ form .input-field:first-child {
     background-color: #f0f0f5;
     border: none;
 }
-form input[ type="submit"] {
+#LoginConfirm {
     margin-top: 1rem;
     padding: 0.5rem;
     background: #13131a59;
@@ -92,7 +92,7 @@ form input[ type="submit"] {
     cursor: pointer;
     color:#13131a ;
 }
-form input[ type="submit"]:hover {
+#LoginConfirm:hover {
     letter-spacing: 0.5px;
     background: linear-gradient(to right, #13131a65, #5757585d, #13131a65);
 }
@@ -103,11 +103,4 @@ form input[ type="submit"]:hover {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
-}
-@media screen and (max-width:600px) {
-    .container {
-       width: 100%;
-       max-width: 100%;
-       
-}
 }
