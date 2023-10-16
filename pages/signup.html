@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style2.css">
+    <script src="../js/requests.js"></script>
+    <script src="../js/resolvers.js"></script>
     <title>Sign up</title>
 </head>
 <body>
@@ -13,32 +15,33 @@
        <div class="container">
             <div class="input-field">
                 <h3>Email address</h3>
-                <input type="email" name="signupeEmail" id="email" placeholder="Enter Your Email">
+                <input type="email" name="signupeEmail" id="SignupEmail" placeholder="Enter Your Email">
                 <div class="underline"></div>
             </div>
             <p>We'll never share your email with anyone else.</p>
             <div class="input-field">
                 <h3>Username</h3>
-                <input type="text" name="signupUsername" id="username" placeholder="Enter Your Username">
+                <input type="text" name="signupUsername" id="SignupUsername" placeholder="Enter Your Username">
                 <div class="underline"></div>
            </div>
            <div class="input-field">
                 <h3>Full Name</h3>
-                <input type="text" name="signupFullName" id="fullname" placeholder="fullname">
+                <input type="text" name="signupFullName" id="SignupFullname" placeholder="fullname">
                 <div class="underline"></div>
            </div>
        
            <div class="input-field">
                 <h3>Password</h3>
-                <input type="password" name="signupPassword" id="password" placeholder="Enter Your Password">
+                <input type="password" name="signupPassword" id="SignupPassword" placeholder="Enter Your Password">
                 <div class="underline"></div>
            </div>
            <div class="input-field">
                 <h4>Birth Date</h4>
-                <input type="date" name="Birthdate" id="Birthdate">
+                <input type="date" name="Birthdate" id="SignupBirthdate">
            </div>
            <div class="input-button" >
-                <button id="SignupConfirm" class="button-confirm" type="button">Confirm</button>
+               <button id="SignupConfirm" class="button-confirm" type="button" onclick="resolve_signup()">Confirm</button>
+
            </div>
        </div>
    
