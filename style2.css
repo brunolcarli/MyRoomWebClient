@@ -1,0 +1,96 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body {
+    background-color: #13131a;
+    min-height: 100%;
+    min-width: 100%;
+    text-align: center;
+    margin: 0;
+}
+header {
+    padding: 50px;
+}
+header h1 {
+    color: #f0f0f5;
+    margin-top: 10px;
+    text-shadow: 5px 2px 20px  rgb(0, 0, 0);
+}
+.container {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 3%;
+    background-color: #f0f0f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
+    
+}
+.container p {
+    color: #13131a81;
+    font-size: 13px;
+    padding-bottom: 30px;
+}
+.input-field {
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+}
+.input-field:first-child {
+    margin-bottom: 1.5rem;
+    
+}
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    background: #13131a13;
+}
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    background: #13131a59;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+}
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+.input-field input  {
+    outline: none;
+    font-size: 1rem;
+    color: #13131a;   
+    background-color: #f0f0f5;
+    text-align: center;
+    padding: 10px;
+    
+}
+.input-button button{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    background: #13131a59;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color:#13131a ;
+}
+.input-button:hover button {
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #13131a65, #5757585d, #13131a65);
+}
+
