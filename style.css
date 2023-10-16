@@ -19,6 +19,7 @@ body {
 .header {
     padding: 50px;
     
+    
 }
 .container {
     max-width: 28rem;
@@ -31,7 +32,8 @@ body {
 h1, p {
     margin-top: 10px;
     color:#f0f0f5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.979);
+    text-shadow: 5px 2px 20px rgb(0, 0, 0);
+   
 }
 form {
     display: flex;
