@@ -9,6 +9,8 @@ function login(){
             localStorage.setItem('session_token', result);
             localStorage.setItem('email', email);
             window.location.href = 'pages/home.html';
+        }else {
+            alert('Failed to login! Check your credentials.');
         }
     } )
 }
