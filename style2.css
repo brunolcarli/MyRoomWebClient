@@ -69,11 +69,13 @@ header h1 {
 .input-field input:focus ~ .underline::after {
     transform: scaleX(1);
 }
-.input-field input {
+.input-field input  {
     outline: none;
     font-size: 1rem;
     color: #13131a;   
     background-color: #f0f0f5;
+    text-align: center;
+    padding: 10px;
     
     
 }
