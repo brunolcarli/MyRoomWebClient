@@ -10,7 +10,7 @@ function login(){
             localStorage.setItem('email', email);
             window.location.href = 'pages/home.html';
         }else {
-            alert('Falha no login! verifique suas credenciais.');
+            alert('Failed without login! check your credentials.');
         }
     } )
 }
