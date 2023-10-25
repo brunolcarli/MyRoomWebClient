@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <script src="js/requests.js"></script>
     <script src="js/resolvers.js"></script>
@@ -26,6 +27,7 @@
             <div class="input-field">
                 <label for="password"></label>
                 <input type="password" name="password" id="LoginPassword" placeholder="Enter Your Password">
+                <i class="bi bi-eye-fill" id="btn-password" onclick="showPassword()"></i>
                 <div class="underline"></div>
             </div><br>
             <button id="LoginConfirm" class="btn btn-success" type="button" onclick="login()">Login</button>

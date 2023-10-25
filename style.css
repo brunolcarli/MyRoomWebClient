@@ -85,6 +85,13 @@ form .input-field:first-child {
     border: none;
     text-align: center;
 }
+.input-field i {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    color: #13131a52;
+
+}
 #LoginConfirm {
     margin-top: 1rem;
     padding: 0.5rem;
@@ -93,7 +100,7 @@ form .input-field:first-child {
     border-radius: 4px;
     transition: all 0.3s ease;
     cursor: pointer;
-    color:#13131a ;
+    color:#13131a;
 }
 #LoginConfirm:hover {
     letter-spacing: 0.5px;
